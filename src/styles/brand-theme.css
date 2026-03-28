@@ -40,4 +40,22 @@ body {
   background-color: var(--color-background);
   color: var(--color-text-primary);
   font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Mobile base overrides */
+@media (max-width: 767px) {
+  :root {
+    --text-major: 22px;
+    --text-minor: 16px;
+    --text-body: 14px;
+    --space-xl: 16px;
+    --space-lg: 12px;
+  }
 }

@@ -22,22 +22,42 @@ function AppShell() {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', height: '100vh', overflow: 'hidden' }}>
-      <JourneyNavigator
-        stages={JOURNEY_STAGES}
-        activeStageId={activeStageId}
-        onSelectStage={handleSelectStage}
-        onNavigateSummary={handleNavigateSummary}
-      />
-      <div style={{ flex: 1, overflow: 'auto' }}>
-        <Routes>
-          <Route path="/" element={<SummaryView />} />
-          <Route path="/stage/:stageId" element={<StageDetailView />} />
-          <Route path="/stage/" element={<Navigate to="/" replace />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+    <>
+      <style>{`
+        .app-shell {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+          overflow: hidden;
+        }
+        .app-content {
+          flex: 1;
+          overflow: auto;
+        }
+        @media (min-width: 1024px) {
+          .app-shell {
+            flex-direction: row;
+            height: 100vh;
+          }
+        }
+      `}</style>
+      <div className="app-shell">
+        <JourneyNavigator
+          stages={JOURNEY_STAGES}
+          activeStageId={activeStageId}
+          onSelectStage={handleSelectStage}
+          onNavigateSummary={handleNavigateSummary}
+        />
+        <div className="app-content">
+          <Routes>
+            <Route path="/" element={<SummaryView />} />
+            <Route path="/stage/:stageId" element={<StageDetailView />} />
+            <Route path="/stage/" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

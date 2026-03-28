@@ -92,6 +92,16 @@ export function SummaryView() {
       </div>
 
       <style>{`
+        @media (max-width: 767px) {
+          .summary-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+          .summary-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
         @media (min-width: 1024px) and (max-width: 1279px) {
           .summary-grid {
             grid-template-columns: repeat(2, 1fr) !important;
