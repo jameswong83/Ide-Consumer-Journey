@@ -1,0 +1,43 @@
+/* src/styles/brand-theme.css */
+:root {
+  /* Initiative Color Palette */
+  --color-brand-blue: #4DC8E8;
+  --color-background: #F0EDE4;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #E8E4DA;
+  --color-text-primary: #1C1C1C;
+  --color-text-secondary: #555555;
+  --color-text-on-blue: #FFFFFF;
+  --color-accent: #4DC8E8;
+  --color-loop-indicator: #4DC8E8;
+  --color-border: #C8C4BA;
+  --color-friction-low: #4DC8E8;
+  --color-friction-mid: #F5A623;
+  --color-friction-high: #1C1C1C;
+
+  /* Typography */
+  --font-heading: 'League Gothic', 'Arial Narrow', sans-serif;
+  --font-body: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  --font-emphasis: 'Dancing Script', cursive;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Type scale */
+  --text-cta: 72px;
+  --text-major: 28px;
+  --text-minor: 20px;
+  --text-subhead: 16px;
+  --text-body: 12px;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
