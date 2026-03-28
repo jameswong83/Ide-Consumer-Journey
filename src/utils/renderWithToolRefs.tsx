@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { IDE_TOOLS } from '../types/journey';
 import { IDE_TOOLS } from '../types/journey';
 
 // Styled inline badge for IDE tool names

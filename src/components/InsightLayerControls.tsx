@@ -1,4 +1,3 @@
-import React from 'react';
 import type { InsightLayerKey } from '../types/journey';
 
 export interface InsightLayerControlsProps {

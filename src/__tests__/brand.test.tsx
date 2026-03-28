@@ -22,11 +22,6 @@ describe('BrandThemeProvider', () => {
         <span />
       </BrandThemeProvider>
     );
-    const styles = getComputedStyle(document.documentElement);
-    // The CSS file is imported by BrandThemeProvider; in jsdom the custom properties
-    // may not be computed, but we can verify the stylesheet was loaded by checking
-    // that the component renders without error and the import doesn't throw.
-    // In a real browser these would resolve; here we just assert the component mounts.
     expect(document.documentElement).toBeTruthy();
   });
 });

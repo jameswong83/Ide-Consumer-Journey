@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { JOURNEY_STAGES } from '../data/journeyStages';
 import { StageSummaryCard } from '../components/StageSummaryCard';

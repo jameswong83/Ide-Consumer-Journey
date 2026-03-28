@@ -1,4 +1,3 @@
-import React from 'react';
 import type { JourneyStage } from '../types/journey';
 
 interface StageHeaderProps {
